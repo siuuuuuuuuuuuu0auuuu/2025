@@ -5,24 +5,25 @@ def is_prime(num) -> bool:
     :return: boolean type
     """
     if num >= 2:
-        for i in range(2, int(num ** 0.5) + 1):
         i = 2
-        while i < (int(num ** 0.5) + 1):
-        #for i in range(2, int(num ** 0.5) + 1):
+        #while i < (int(num ** 0.5) + 1):
+        while i < (int(pow(num, 0.5)) + 1):
             if num % i == 0:
                 return False
-                #is_prime = False
-                #break
-            #print(i, end=' ')
             i = i + 1
     else:
         return False
     return True
 
-# main
-#help(abs)
-help(is_prime)
-#help(is_prime)
-n = int(input("Input number : "))
+numbers = input("Input number : ").split()  # ex) 900 1000
+n1 = int(numbers[0])
+n2 = int(numbers[1])
 
-if is_prime(n):  # function call
+if n1 > n2:
+    n1, n2 = n2, n1
+
+j = n1
+while j <= n2:
+    if is_prime(j):
+        print(j, end=' ')
+    j = j + 1
