@@ -11,7 +11,7 @@ snacks[0] = "낙곱새"
 while True:
     menu = input(f'다음 술중에 고르세요.\n1) {drinks[0]}   2) {drinks[1]}   3) {drinks[2]}   4) {drinks[3]}   5) {drinks[4]}   6) 아무거나   7) 종료 : ')
     if menu == '1':
-        print(f'{drinks[0]}에 어울리는 안주는 {snacks[0]} 입니다')
+        prinat(f'{drinks[0]}에 어울리는 안주는 {snacks[0]} 입니다')
     elif menu == '2':
         print(f'{drinks[1]}에 어울리는 안주는 {snacks[1]} 입니다')
     elif menu == '3':
